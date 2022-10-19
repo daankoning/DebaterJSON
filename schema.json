@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "tournaments": {
+      "type": "array",
+      "description": "The tournaments to include in this account.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tournament_name": {
+            "type": "string",
+            "description": "The name of the tournament."
+          },
+          "format": {
+            "type": "string",
+            "description": "The debating format used at this tournament (e.g. BP)."
+          },
+          "broke": {
+            "type": "boolean",
+            "description": "Whether the debater broke at this tournament."
+          },
+          "rounds": {
+            "type": "array",
+            "description": "All the rounds the debater participated in in this tournament.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the round (e.g. 'round 1' or 'grand finals'."
+                },
+                "outround": {
+                  "type": "boolean",
+                  "description": "If this round was an outround."
+                },
+                "prepped": {
+                  "type": "boolean",
+                  "description": "Whether the round was a prepped round (if applicable)."
+                },
+                "date": {
+                  "type": "string",
+                  "description": "The date at which this round took place. Should be an ISO date."
+                },
+                "topics": {
+                  "type": "array",
+                  "description": "Keywords relating to the topic of the debate (e.g. 'Politics').",
+                  "items": {"type": "string"}
+                },
+                "motion": {
+                  "type": "string",
+                  "description": "The motion of the round."
+                },
+                "infoslide":{
+                  "type": "string",
+                  "description": "The infoslide attached to the motion."
+                },
+                "side": {
+                  "type": "string",
+                  "description": "The side of the motion the debater was on.",
+                  "enum": ["prop", "opp", "gov", "aff", "neg"]
+                },
+                "half": {
+                  "type": "string",
+                  "description": "The half of the debate the debater was on. Only applies to BP.",
+                  "enum": ["opening", "closing"]
+                },
+                "speech": {
+                  "type": "integer",
+                  "description": "The number of the speech the debater gave. Only counts speeches on the debater's side (e.g. in BP an opposition whip would be speech 4, not 8)."
+                },
+                "result": {
+                  "type": "integer",
+                  "description": "How many points the debater's team got from this round. In two-team formats, a 1 or 0 simply mean a win or loss, respectively. For more complex formats, such as BP, please refer to the format's manuals for how many points a certain result yields."
+                },
+                "speak": {
+                  "type": "number",
+                  "description": "The speak the debater got for this speech."
+                }
+              }
+            }
+          }
+        },
+        "required": ["tournament_name"]
+      }
+    }
+  },
+  "required": [
+    "tournaments"
+  ]
+}
