@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$version": "v0.0.3",
+  "$version": "v0.0.4",
 
   "type": "object",
   "required": ["tournaments"],
@@ -24,6 +24,11 @@
             "type": "boolean",
             "description": "Whether the debater broke at this tournament."
           },
+          "break_categories": {
+            "type": ["string", "array"],
+            "description": "The category or categories the speaker broke in.",
+            "items" : {"type": "string"}
+          },
           "rounds": {
             "type": "array",
             "description": "All the rounds the debater participated in in this tournament.",
@@ -37,6 +42,10 @@
                 "outround": {
                   "type": "boolean",
                   "description": "If this round was an outround."
+                },
+                "outround_category": {
+                  "type": "string",
+                  "description": "What speaker category this outround belongs to (e.g. open or ESL). Should only be used if the round is an outround."
                 },
                 "prepped": {
                   "type": "boolean",
