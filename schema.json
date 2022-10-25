@@ -78,6 +78,11 @@
                   "description": "The half of the debate the debater was on. Only applies to BP.",
                   "enum": ["opening", "closing"]
                 },
+                "team_mates": {
+                  "type": ["string", "array"],
+                  "description": "The teammate or teammates the speaker was debating with this round.",
+                  "items": {"type": "string"}
+                },
                 "speech": {
                   "type": "integer",
                   "description": "The number of the speech the debater gave. Only counts speeches on the debater's side (e.g. in BP an opposition whip would be speech 4, not 8)."
