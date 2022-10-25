@@ -37,7 +37,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "description": "The name of the round (e.g. 'round 1' or 'grand finals'."
+                  "description": "The name of the round (e.g. 'round 1' or 'grand finals')."
                 },
                 "outround": {
                   "type": "boolean",
