@@ -85,11 +85,13 @@
                 },
                 "speech": {
                   "type": "integer",
-                  "description": "The number of the speech the debater gave. Only counts speeches on the debater's side (e.g. in BP an opposition whip would be speech 4, not 8)."
+                  "description": "The number of the speech the debater gave. Only counts speeches on the debater's side (e.g. in BP an opposition whip would be speech 4, not 8).",
+                  "deprecated": true
                 },
                 "speak": {
                   "type": "number",
-                  "description": "The speak the debater got for this speech."
+                  "description": "The speak the debater got for this speech.",
+                  "deprecated": true
                 },
                 "speeches": {
                   "type": "array",
