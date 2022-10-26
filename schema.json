@@ -91,6 +91,23 @@
                   "type": "number",
                   "description": "The speak the debater got for this speech."
                 },
+                "speeches": {
+                  "type": "array",
+                  "description": "The speeches the speaker gave in this round.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "speech": {
+                        "type": "integer",
+                        "description": "The number of this speech. Only counts speeches on the debater's side (e.g. in BP an opposition whip would be speech 4, not 8)."
+                      },
+                      "speak": {
+                        "type": "number",
+                        "description": "The speak this speech received."
+                      }
+                    }
+                  }
+                },
                 "result": {
                   "type": "integer",
                   "description": "How many points the debater's team got from this round. In two-team formats, a 1 or 0 simply mean a win or loss, respectively. For more complex formats, such as BP, please refer to the format's manuals for how many points a certain result yields."
