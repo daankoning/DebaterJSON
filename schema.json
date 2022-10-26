@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$version": "v1.1.0",
+  "$version": "v1.1.1",
 
   "type": "object",
   "required": ["tournaments"],
@@ -82,7 +82,7 @@
                   "description": "The half of the debate the debater was on. Only applies to BP.",
                   "enum": ["opening", "closing"]
                 },
-                "team_mates": {
+                "teammates": {
                   "type": ["string", "array"],
                   "description": "The teammate or teammates the speaker was debating with this round.",
                   "items": {"type": "string"}
