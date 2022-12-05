@@ -117,6 +117,10 @@
                 "result": {
                   "type": "integer",
                   "description": "How many points the debater's team got from this round. In two-team formats, a 1 or 0 simply mean a win or loss, respectively. For more complex formats, such as BP, please refer to the format's manuals for how many points a certain result yields."
+                },
+                "advanced": {
+                  "type": "boolean",
+                  "description": "If the speaker advanced to the next phase of the tournament (if this round is an outround)."
                 }
               }
             }
